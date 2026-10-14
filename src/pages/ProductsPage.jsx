@@ -77,6 +77,7 @@ const categoryProducts = {
     eyebrow: "Para momentos especiales",
     description:
       "Tortas para acompañar celebraciones y encuentros. Consultanos por las opciones disponibles para tu ocasión.",
+    image: "/images/Torta1.jpeg",
     imageAlt: "Ilustración de una torta de Dulce Encanto",
     icon: CakeSlice,
   },
