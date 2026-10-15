@@ -7,13 +7,23 @@ function getInquiryUrl(productName) {
 }
 
 export function CatalogCard({ product }) {
-  const { name, eyebrow, description, image, imageAlt, icon: Icon } = product
+  const { name, eyebrow, description, image, imageSrcSet, imageAlt, imageWidth, imageHeight, icon: Icon } = product
 
   return (
     <article className="grid max-w-3xl overflow-hidden rounded-3xl border border-lilac-200 bg-cream-50 shadow-sm sm:grid-cols-[190px_1fr]">
       <div className="relative min-h-44 overflow-hidden bg-lilac-100 sm:min-h-full">
         {image ? (
-          <img className="absolute inset-0 h-full w-full object-cover" src={image} alt={imageAlt} />
+          <img
+            className="absolute inset-0 h-full w-full object-cover"
+            src={image}
+            srcSet={imageSrcSet}
+            alt={imageAlt}
+            width={imageWidth}
+            height={imageHeight}
+            sizes="(min-width: 640px) 190px, 100vw"
+            loading="lazy"
+            decoding="async"
+          />
         ) : (
           <div className="grid h-full min-h-44 place-items-center bg-gradient-to-br from-lilac-100 to-lilac-200 text-lilac-700" role="img" aria-label={imageAlt}>
             <Icon className="size-20" strokeWidth={1.2} aria-hidden="true" />

@@ -32,7 +32,7 @@ function getWhatsAppOrderUrl(productName, quantity) {
 }
 
 export function ProductCard({ product, quantity, onQuantityChange }) {
-  const { name, eyebrow, description, icon: Icon, image, imageAlt, imagePosition } = product
+  const { name, eyebrow, description, icon: Icon, image, imageSrcSet, imageAlt, imageWidth, imageHeight, imagePosition } = product
   const boxLabel = quantity === 1 ? 'caja' : 'cajas'
   const styles = cardStyles[product.id] ?? cardStyles.tradicional
 
@@ -47,7 +47,17 @@ export function ProductCard({ product, quantity, onQuantityChange }) {
     <article className={`relative grid overflow-hidden rounded-3xl border sm:grid-cols-[180px_1fr] ${styles.article}`}>
       <div className={`absolute inset-x-0 top-0 z-10 h-1 ${styles.accent}`} aria-hidden="true" />
       <div className={`relative aspect-[16/8] overflow-hidden sm:aspect-auto sm:min-h-full ${styles.imageBackground}`}>
-        <img className={`absolute inset-0 h-full w-full object-cover ${imagePosition}`} src={image} alt={imageAlt} />
+        <img
+          className={`absolute inset-0 h-full w-full object-cover ${imagePosition}`}
+          src={image}
+          srcSet={imageSrcSet}
+          alt={imageAlt}
+          width={imageWidth}
+          height={imageHeight}
+          sizes="(min-width: 640px) 180px, 100vw"
+          loading="lazy"
+          decoding="async"
+        />
         <span className={`absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em] shadow-md ${styles.badge}`}>
           <Icon className="size-3.5" aria-hidden="true" />
           12 unidades
@@ -65,11 +75,11 @@ export function ProductCard({ product, quantity, onQuantityChange }) {
               Cantidad
             </label>
             <div className="inline-flex items-center overflow-hidden rounded-full border border-cocoa-700 bg-white" role="group" aria-label={`Cantidad de ${name}`}>
-              <button className="grid size-10 place-items-center text-cocoa-900 transition hover:bg-lilac-100 disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer" type="button" onClick={decrease} disabled={quantity === 1} aria-label={`Quitar una ${name.toLowerCase()}`}>
+              <button className="grid size-10 place-items-center text-cocoa-900 transition hover:bg-lilac-100 disabled:cursor-not-allowed disabled:opacity-40" type="button" onClick={decrease} disabled={quantity === 1} aria-label={`Quitar una ${name.toLowerCase()}`}>
                 <Minus className="size-4" aria-hidden="true" />
               </button>
               <input className="h-10 w-10 border-x border-cocoa-700 bg-white text-center font-bold text-cocoa-950 outline-none focus:bg-lilac-50" id={`quantity-${product.id}`} type="number" min="1" inputMode="numeric" value={quantity} onChange={updateFromInput} />
-              <button className="grid size-10 place-items-center text-cocoa-900 transition hover:bg-lilac-100 cursor-pointer" type="button" onClick={increase} aria-label={`Agregar una ${name.toLowerCase()}`}>
+              <button className="grid size-10 place-items-center text-cocoa-900 transition hover:bg-lilac-100" type="button" onClick={increase} aria-label={`Agregar una ${name.toLowerCase()}`}>
                 <Plus className="size-4" aria-hidden="true" />
               </button>
             </div>

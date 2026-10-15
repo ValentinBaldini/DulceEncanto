@@ -45,8 +45,12 @@ const brigadeiroProducts = [
     description:
       "Una presentación especial para regalar, sumar a una mesa dulce o acompañar una celebración.",
     icon: Gift,
-    image: "/images/Brigadeiros-premium.jpeg",
+    image: "/images/optimized/premium-960.webp",
+    imageSrcSet:
+      "/images/optimized/premium-480.webp 480w, /images/optimized/premium-960.webp 960w",
     imageAlt: "Brigadeiros en presentación premium",
+    imageWidth: 960,
+    imageHeight: 1280,
     imagePosition: "object-center",
   },
   {
@@ -56,8 +60,12 @@ const brigadeiroProducts = [
     description:
       "La opción clásica para una merienda, una juntada o ese antojo que no necesita excusas.",
     icon: Package,
-    image: "/images/Brigadeiros-tradicional-2.jpeg",
+    image: "/images/optimized/tradicional-960.webp",
+    imageSrcSet:
+      "/images/optimized/tradicional-480.webp 480w, /images/optimized/tradicional-960.webp 960w",
     imageAlt: "Brigadeiros en presentación tradicional",
+    imageWidth: 960,
+    imageHeight: 1280,
     imagePosition: "origin-top scale-[1.55] object-top",
   },
 ];
@@ -68,8 +76,12 @@ const categoryProducts = {
     eyebrow: "Horneá cuando quieras",
     description:
       "Chipá congelado para disfrutar recién hecho. Consultanos por las presentaciones disponibles y coordiná tu pedido.",
-    image: "/images/Chipa1.jpeg",
+    image: "/images/optimized/chipa-producto-960.webp",
+    imageSrcSet:
+      "/images/optimized/chipa-producto-480.webp 480w, /images/optimized/chipa-producto-960.webp 960w",
     imageAlt: "Chipá de Dulce Encanto listo para hornear",
+    imageWidth: 960,
+    imageHeight: 884,
     icon: Snowflake,
   },
   tortas: {
@@ -77,8 +89,12 @@ const categoryProducts = {
     eyebrow: "Para momentos especiales",
     description:
       "Tortas para acompañar celebraciones y encuentros. Consultanos por las opciones disponibles para tu ocasión.",
-    image: "/images/Torta1.jpeg",
-    imageAlt: "Ilustración de una torta de Dulce Encanto",
+    image: "/images/optimized/torta-900.webp",
+    imageSrcSet:
+      "/images/optimized/torta-480.webp 480w, /images/optimized/torta-900.webp 900w",
+    imageAlt: "Torta artesanal decorada de Dulce Encanto",
+    imageWidth: 900,
+    imageHeight: 1600,
     icon: CakeSlice,
   },
 };
@@ -108,13 +124,13 @@ export function ProductsPage() {
             </Link>
             <div className="mt-8 flex flex-col gap-6">
               <div>
-                <p className="section-label">Catálogo</p>
+                <p className="section-label">Catálogo artesanal en Mendoza</p>
                 <h1 className="mt-3 max-w-3xl font-serif text-5xl leading-[0.98] tracking-[-0.04em] text-cocoa-950 sm:text-6xl">
                   Algo rico para cada momento.
                 </h1>
               </div>
               <p className="mt-1 leading-7 text-cocoa-700">
-                Explorá brigadeiros, chipá congelado y tortas.
+                Explorá brigadeiros, chipá congelado y tortas artesanales por encargo.
               </p>
             </div>
           </div>

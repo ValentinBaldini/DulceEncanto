@@ -38,7 +38,7 @@ export function HomePage() {
                 <span className="mt-2 block italic text-lilac-600">y con encanto.</span>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-7 text-cocoa-600 sm:mt-8 sm:text-xl sm:leading-8">
-                Brigadeiros brasileños, chipá congelado y tortas hechas con dedicación para convertir cualquier momento en algo especial.
+                Brigadeiros brasileños, chipá congelado y tortas artesanales por encargo en Mendoza. Todo hecho con dedicación para cada momento.
               </p>
               <div className="mt-7 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:gap-3">
                 <Link
@@ -63,7 +63,17 @@ export function HomePage() {
             <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
               <div className="absolute -inset-5 rotate-3 rounded-[2.5rem] border border-lilac-300/60" />
               <div className="relative aspect-[5/4] overflow-hidden rounded-[2.25rem] bg-lilac-200 shadow-2xl shadow-cocoa-900/10 sm:aspect-[4/5]">
-                <img className="h-full w-full object-cover" src="/images/Brigadeiros3.jpeg" alt="Brigadeiros y chipá de Dulce Encanto" />
+                <img
+                  className="h-full w-full object-cover"
+                  src="/images/optimized/hero-brigadeiros-812.webp"
+                  srcSet="/images/optimized/hero-brigadeiros-480.webp 480w, /images/optimized/hero-brigadeiros-812.webp 812w"
+                  alt="Brigadeiros artesanales de Dulce Encanto"
+                  width="812"
+                  height="1444"
+                  sizes="(min-width: 1024px) 45vw, (min-width: 640px) 512px, calc(100vw - 2.5rem)"
+                  fetchPriority="high"
+                  decoding="async"
+                />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-cocoa-950 via-cocoa-950/85 to-transparent px-6 pb-6 pt-28 text-white">
                 </div>
               </div>
@@ -85,7 +95,16 @@ export function HomePage() {
         <section className="bg-white py-24 sm:py-28" aria-labelledby="catalogo-title">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12">
             <div className="relative mx-auto w-full max-w-lg">
-              <img className="aspect-square w-full rounded-[2rem] object-cover" src="/images/hero-products.jpg" alt="Brigadeiros y chipá de Dulce Encanto" />
+              <img
+                className="aspect-square w-full rounded-[2rem] object-cover"
+                src="/images/optimized/catalogo-360.webp"
+                alt="Brigadeiros y chipá de Dulce Encanto"
+                width="360"
+                height="640"
+                sizes="(min-width: 1024px) 40vw, (min-width: 640px) 512px, calc(100vw - 2.5rem)"
+                loading="lazy"
+                decoding="async"
+              />
               <div className="absolute -bottom-5 right-5 rounded-2xl bg-white px-5 py-4 shadow-xl">
                 <strong className="block font-serif text-2xl text-lilac-700">Categorías</strong>
                 <span className="text-sm text-cocoa-700">para elegir</span>
@@ -154,8 +173,14 @@ export function HomePage() {
             <div className="relative min-h-[360px] lg:min-h-full">
               <img
                 className="absolute inset-0 h-full w-full object-cover"
-                src="/images/brigadeiros.jpg"
+                src="/images/optimized/promo-brigadeiros-640.webp"
+                srcSet="/images/optimized/promo-brigadeiros-320.webp 320w, /images/optimized/promo-brigadeiros-640.webp 640w"
                 alt="Caja de brigadeiros de Dulce Encanto"
+                width="640"
+                height="640"
+                sizes="(min-width: 1024px) 43vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cocoa-950/80 via-cocoa-950/10 to-transparent lg:bg-gradient-to-r" />
               <div className="absolute bottom-6 right-6 max-w-[15rem] rounded-2xl bg-white p-4 text-cocoa-950 shadow-2xl sm:bottom-8 sm:right-8">
@@ -176,8 +201,27 @@ export function HomePage() {
         <section id="nosotros" className="bg-cocoa-950 py-24 text-white sm:py-28">
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:px-12">
             <div className="grid grid-cols-2 gap-4">
-              <img className="mt-12 aspect-[3/4] w-full rounded-[1.75rem] object-cover" src="/images/Brigadeiros-tradicional.jpeg" alt="Brigadeiros de chocolate de Dulce Encanto" />
-              <img className="aspect-[3/4] w-full rounded-[1.75rem] object-cover" src="/images/chipa.jpg" alt="Chipá listo para disfrutar" />
+              <img
+                className="mt-12 aspect-[3/4] w-full rounded-[1.75rem] object-cover"
+                src="/images/optimized/brigadeiros-tradicional-640.webp"
+                srcSet="/images/optimized/brigadeiros-tradicional-320.webp 320w, /images/optimized/brigadeiros-tradicional-640.webp 640w"
+                alt="Brigadeiros de chocolate de Dulce Encanto"
+                width="640"
+                height="854"
+                sizes="(min-width: 1024px) 22vw, 45vw"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                className="aspect-[3/4] w-full rounded-[1.75rem] object-cover"
+                src="/images/optimized/chipa-home-360.webp"
+                alt="Chipá listo para disfrutar"
+                width="360"
+                height="640"
+                sizes="(min-width: 1024px) 22vw, 45vw"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div>
               <p className="section-label text-lilac-300">Hecho con cariño</p>

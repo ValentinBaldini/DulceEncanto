@@ -10,6 +10,9 @@ export function BrandMark({ compact = false, onClick }) {
         className={`${compact ? 'size-10' : 'size-12'} rounded-full border border-lilac-200 object-cover`}
         src="/images/logo.jpg"
         alt="Logo de Dulce Encanto"
+        width="150"
+        height="150"
+        decoding="async"
       />
       <span className="leading-none">
         <strong className="block font-serif text-lg font-normal tracking-tight text-cocoa-900">
